@@ -1,4 +1,4 @@
-{{- if .Site.IsServer -}}
+{{- if hugo.IsServer -}}
 {{ $trackingScript := resources.Get "js/matomo-tracking.js" }}
 <script data-id="matomo-tracking" data-matomo-tracking-url='{{ $.Site.Params.matomo.url }}' data-matomo-tracking-id='{{ $.Site.Params.matomo.id }}' src="{{ $trackingScript.RelPermalink }}" defer></script>
 {{- else -}}
